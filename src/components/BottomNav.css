@@ -10,6 +10,7 @@
   z-index: 50;
 }
 
+/* ✅ これが中身をセンター寄せにしてくれるラッパー */
 .nav-inner {
   max-width: 800px;
   margin: 0 auto;

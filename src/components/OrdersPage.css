@@ -1,0 +1,35 @@
+/* ===============================
+   OrdersPage.css
+   予約一覧ページ（開発中メッセージ）
+================================ */
+
+.orders-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 8rem);
+  color: #6b7280; /* gray-500 */
+  padding-top: 80px;
+  text-align: center;
+  background-color: #fafaf9;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.orders-message {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.orders-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #047857; /* emerald-700 */
+  margin-bottom: 8px;
+}
+
+.orders-subtitle {
+  font-size: 16px;
+  color: #4b5563; /* gray-600 */
+}

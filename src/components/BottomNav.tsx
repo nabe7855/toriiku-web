@@ -1,70 +1,68 @@
-import React from "react";
-import type { ActiveTab } from "@/types";
-import { HomeIcon, MapIcon, DocumentTextIcon, UserIcon } from "./icons";
-import "./BottomNav.css"; // ← 新しく追加するCSSを読み込む！
+'use client';
+
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import type { ActiveTab } from '@/types';
+import { HomeIcon, MapIcon, DocumentTextIcon, UserIcon } from './icons';
+import '@/components/BottomNav.css';
 
 interface BottomNavProps {
   activeTab: ActiveTab;
   setActiveTab: (tab: ActiveTab) => void;
 }
 
-interface NavItemProps {
+const NavItem: React.FC<{
   label: string;
   icon: React.ReactNode;
   isActive: boolean;
   onClick: () => void;
-}
-
-/**
- * 各ナビゲーションボタン
- */
-const NavItem: React.FC<NavItemProps> = ({
-  label,
-  icon,
-  isActive,
-  onClick,
-}) => {
+}> = ({ label, icon, isActive, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`nav-item ${isActive ? "active" : ""}`}
+      className={`nav-item ${isActive ? 'active' : ''}`}
+      aria-label={label}
     >
-      <div className="nav-icon">{icon}</div>
+      <div className="nav-icon icon-size">{icon}</div>
       <span className="nav-label">{label}</span>
     </button>
   );
 };
 
-/**
- * ボトムナビゲーションバー本体
- */
 const BottomNav: React.FC<BottomNavProps> = ({ activeTab, setActiveTab }) => {
+  const router = useRouter();
+
+  const handleNav = (tab: ActiveTab, path: string) => {
+    setActiveTab(tab);
+    router.push(path);
+  };
+
   return (
     <footer className="bottom-nav">
       <div className="nav-inner">
         <NavItem
           label="ホーム"
-          icon={<HomeIcon className="icon-size" />}
-          isActive={activeTab === "home"}
-          onClick={() => setActiveTab("home")}
+          icon={<HomeIcon />}
+          isActive={activeTab === 'home'}
+          onClick={() => handleNav('home', '/home')}
         />
         <NavItem
           label="マップ"
-          icon={<MapIcon className="icon-size" />}
-          isActive={activeTab === "map"}
-          onClick={() => setActiveTab("map")}
+          icon={<MapIcon />}
+          isActive={activeTab === 'map'}
+          onClick={() => handleNav('map', '/map')}
         />
         <NavItem
           label="予約一覧"
-          icon={<DocumentTextIcon className="icon-size" />}
-          isActive={activeTab === "orders"}
-          onClick={() => setActiveTab("orders")}
+          icon={<DocumentTextIcon />}
+          isActive={activeTab === 'orders'}
+          onClick={() => handleNav('orders', '/orders')}
         />
         <NavItem
           label="マイページ"
-          icon={<UserIcon className="icon-size" />}
-          isActive={activeTab === "profile"}
-          onClick={() => setActiveTab("profile")}
+          icon={<UserIcon />}
+          isActive={activeTab === 'profile'}
+          onClick={() => handleNav('profile', '/profile')}
         />
       </div>
     </footer>

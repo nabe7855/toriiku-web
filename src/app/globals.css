@@ -73,3 +73,30 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* --- HomePage Button Styles --- */
+.searchButton {
+  width: 100%;
+  background-color: #ffffff;
+  color: #047857; /* emerald-700 */
+  font-weight: bold;
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid #047857;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  font-size: 16px;
+}
+
+.searchButton:hover {
+  background-color: #ecfdf5; /* emerald-50 */
+}
+
+.searchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

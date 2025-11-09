@@ -1,0 +1,183 @@
+/* ===============================
+   ProfilePage.css
+================================ */
+
+.profile-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+
+.profile-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #047857;
+  margin-bottom: 12px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* プロフィール */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-email {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #047857;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  color: #065f46;
+}
+
+/* 利用プラン */
+.plan-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  background-color: #f9fafb;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.plan-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-medium {
+  width: 24px;
+  height: 24px;
+  color: #9ca3af;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+.plan-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.text-muted-small {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.upgrade-button {
+  background-color: #047857;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.upgrade-button:hover {
+  background-color: #065f46;
+}
+
+/* お気に入り */
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-button:hover {
+  color: #e11d48;
+}
+
+/* カテゴリ設定 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.category-button {
+  border: 2px solid #d1d5db;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-button:hover {
+  background-color: #f3f4f6;
+}
+
+.category-button.active {
+  border-color: #047857;
+  background-color: #d1fae5;
+  color: #065f46;
+}
