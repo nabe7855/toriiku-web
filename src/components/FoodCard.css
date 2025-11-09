@@ -1,0 +1,80 @@
+.foodcard-container {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foodcard-container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* 商品画像 */
+.foodcard-image {
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+/* テキスト部分 */
+.foodcard-content {
+  flex: 1;
+}
+
+.foodcard-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.foodcard-description {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.foodcard-time {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* 価格 */
+.foodcard-price {
+  color: #e36c09;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.foodcard-original {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+/* ハートボタン */
+.favorite-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  transform: scale(1);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.favorite-btn.active {
+  color: red;
+}

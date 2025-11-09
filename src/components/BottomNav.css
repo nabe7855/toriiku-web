@@ -1,0 +1,66 @@
+/* ====== 全体レイアウト ====== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.nav-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  height: 64px;
+  align-items: center;
+}
+
+/* ====== 各ボタン ====== */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #6b7280; /* グレー */
+  font-size: 12px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-item:hover {
+  color: #10b981; /* エメラルド */
+  transform: translateY(-2px);
+}
+
+/* ====== アクティブ状態 ====== */
+.nav-item.active {
+  color: #059669; /* 少し濃いエメラルド */
+  font-weight: 600;
+}
+
+/* ====== アイコン ====== */
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.icon-size {
+  width: 24px;
+  height: 24px;
+}
+
+/* ====== ラベル ====== */
+.nav-label {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}

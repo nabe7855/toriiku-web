@@ -1,0 +1,53 @@
+/* 固定位置と背景 */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+/* 内側レイアウト */
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* アプリ名 */
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #059669; /* エメラルドカラー */
+}
+
+/* ボタン */
+.header-button {
+  background-color: #d1fae5; /* エメラルドの淡い色 */
+  color: #065f46;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.header-button:hover {
+  background-color: #a7f3d0;
+}
+
+/* アイコン */
+.header-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}

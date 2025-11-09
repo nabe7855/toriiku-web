@@ -40,3 +40,36 @@ a {
     color-scheme: dark;
   }
 }
+
+.app-container {
+  min-height: 100vh;
+  background-color: #fafaf9; /* stone-50 */
+  padding-bottom: 5rem;
+}
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+ /* src/app/globals.css に追加 */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+/* スクロールバー非表示 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

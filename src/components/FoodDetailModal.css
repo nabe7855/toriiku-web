@@ -1,0 +1,217 @@
+/* 背景（半透明） */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* モーダル全体 */
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 画像部分 */
+.modal-image-area {
+  position: relative;
+}
+.modal-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(40, 40, 40, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.close-btn:hover {
+  background: rgba(40, 40, 40, 0.8);
+}
+.icon-close {
+  width: 18px;
+  height: 18px;
+}
+
+/* 本文部分 */
+.modal-body {
+  padding: 24px;
+}
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* 価格部分 */
+.price-area {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.original-price {
+  text-decoration: line-through;
+  color: #777;
+}
+.discounted-price {
+  font-weight: bold;
+  font-size: 28px;
+}
+.discounted-price.free {
+  color: #059669;
+}
+.discounted-price.paid {
+  color: #ef4444;
+}
+
+/* 説明文 */
+.description {
+  color: #444;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* 情報セクション */
+.info-section {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 20px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 店舗情報 */
+.store-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #666;
+  margin-right: 8px;
+}
+.store-text {
+  flex-grow: 1;
+}
+.store-name {
+  font-weight: 600;
+  color: #222;
+}
+.store-address {
+  font-size: 13px;
+  color: #666;
+}
+.favorite-btn {
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.favorite-btn.active {
+  color: #e11d48;
+  background: #fee2e2;
+}
+.favorite-btn.inactive {
+  color: #888;
+}
+.favorite-btn.inactive:hover {
+  background: #f3f4f6;
+}
+.icon-heart {
+  width: 22px;
+  height: 22px;
+}
+
+/* 受け取り情報 */
+.pickup-info {
+  display: flex;
+  align-items: center;
+}
+.pickup-label {
+  font-weight: 600;
+  color: #333;
+}
+.pickup-time {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 下部ボタンエリア */
+.footer-area {
+  border-top: 1px solid #eee;
+  background: #fff;
+  padding: 16px;
+  position: sticky;
+  bottom: 0;
+}
+.rescue-btn {
+  width: 100%;
+  background: #059669;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.rescue-btn:hover {
+  background: #047857;
+}
+.notice {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

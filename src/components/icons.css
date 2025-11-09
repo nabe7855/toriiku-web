@@ -1,0 +1,21 @@
+/* スピナーアニメーション */
+.spinner {
+  animation: spin 1s linear infinite;
+  width: 24px;
+  height: 24px;
+}
+
+.spinner-circle {
+  opacity: 0.25;
+}
+
+.spinner-path {
+  opacity: 0.75;
+}
+
+/* 回転アニメーション */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
