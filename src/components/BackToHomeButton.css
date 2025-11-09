@@ -1,0 +1,35 @@
+/* components/BackToHomeButton.css */
+
+/* ====== ボタン全体 ====== */
+.back-home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #10b981; /* エメラルド */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.back-home-button:hover {
+  background-color: #059669; /* 濃いめのエメラルド */
+  transform: translateY(-1px);
+}
+
+/* ====== アイコン ====== */
+.back-home-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ====== テキスト ====== */
+.back-home-label {
+  letter-spacing: 0.03em;
+}
