@@ -38,7 +38,8 @@ export const generateSummary = async (description: string): Promise<string> => {
         contents: `以下の文章を元に、フードロス削減アプリ「トリーク」がどのようなサービスなのか、新しいユーザー向けに親しみやすい言葉で、簡潔に3つの箇条書きで説明してください。\n\n---\n\n${description}`
     });
     // AIからの返答（response）の中から、テキスト部分だけを取り出して返します。
-    return response.text;
+    return response.text ?? "";
+
   } catch (error) {
     // AIとの通信中にエラーが発生した場合は、その内容をコンソールに表示し、
     // ユーザーにはエラーメッセージを伝えます。
