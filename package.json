@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "toriku-next",
+=======
+  "name": "toriiku-web",
+>>>>>>> 7c13d231bfc043050476b51e1d08b84119e630a5
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,6 +22,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+<<<<<<< HEAD
+=======
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+>>>>>>> 7c13d231bfc043050476b51e1d08b84119e630a5
     "eslint": "^9",
     "eslint-config-next": "16.0.1"
   }
