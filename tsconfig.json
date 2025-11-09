@@ -14,16 +14,10 @@
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ],
     "paths": {
-<<<<<<< HEAD
       "@/*": ["./src/*"]
-=======
-      "@/*": ["./*"]
->>>>>>> 7c13d231bfc043050476b51e1d08b84119e630a5
     }
   },
   "include": [
@@ -32,11 +26,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-<<<<<<< HEAD
-, "next.config.js"  ],
-=======
+    "**/*.mts",
+    "next.config.js"
   ],
->>>>>>> 7c13d231bfc043050476b51e1d08b84119e630a5
   "exclude": ["node_modules"]
 }
